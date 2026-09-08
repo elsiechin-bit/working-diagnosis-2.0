@@ -1,0 +1,52 @@
+---
+layout: essay
+title: Peptides go viral: the longevity influencer economy
+category: clinical
+publishedDate: 2026-01-01
+updatedDate: 2026-01-01
+draft: false
+---
+
+
+## Overview
+
+
+The companion explainer to this essay covers the pharmacology of the peptides now circulating outside prescription channels - what they claim to do, and what the actual harms are. This piece is about how they got so visible so quickly. Between roughly 2022 and now, "peptides" went from a niche interest among a small subset of bodybuilders and longevity enthusiasts to a mainstream social media topic, discussed with the same casualness as a supplement stack. That shift has a specific, traceable history, and it matters clinically because it has changed who is likely to bring it up in a consultation - not just competitive lifters, but wellness-oriented patients of a much broader profile.
+
+        ## The GLP-1 effect
+        The single biggest driver of "peptide" entering everyday conversation was the extraordinary public visibility of semaglutide and tirzepatide from around 2021 onward - a genuine, well-evidenced pharmacological breakthrough for obesity and diabetes that also happens, technically, to be a peptide drug. Its cultural saturation did two things at once: it normalised the idea of an injectable peptide as a legitimate, powerful, headline-worthy medical tool, and it created a large, urgent, price-sensitive demand that outstripped supply during the well-documented 2022-2023 shortages. Compounding pharmacies stepped into that gap, legally in many cases, producing compounded semaglutide and tirzepatide during the FDA's official shortage listing - and a much less legal grey market of overseas and online sellers stepped in alongside them, some offering products with no verified sterility, purity or accurate dosing.1 By the time the shortages eased and US regulators moved to restrict compounding once the branded shortage was declared resolved, "peptide" had become a familiar, faintly glamorous word to a much wider audience than it had ever reached before.
+
+        ## What actually spread beyond GLP-1s
+        That familiarity created an opening for a second, less regulated wave: peptides with genuinely obscure or absent human evidence, marketed on the coattails of the GLP-1 story. The most visible in social media content include BPC-157 and TB-500 (marketed for tendon and soft-tissue "healing", sold as injectable vials or nasal sprays, sourced almost entirely as unapproved "research chemicals"), growth-hormone secretagogues such as ipamorelin and CJC-1295 (marketed for muscle gain, fat loss and anti-ageing effects via increased endogenous growth hormone pulses), melanotan II (marketed as a tanning peptide, with a well-documented side-effect profile including nausea, spontaneous erections, and darkening of naevi that has prompted dermatology concern about missed melanoma), and PT-141/bremelanotide (marketed for libido, the only one of this group with an actual approved analogue - Vyleesi - for a narrow indication, sold far more widely and casually than that approval would suggest is appropriate). None of the first three has a medicine approval anywhere for the indications they are marketed for; all are sold through the same "not for human consumption" labelling fiction seen in the nootropics and SARMs markets.
+
+          How peptides became a mainstream social media topic
+          
+            2017-2021BPC-157 and other "healing peptides" circulate quietly within bodybuilding and biohacker forums, largely unnoticed outside those communities.
+            2021-2022Semaglutide (Ozempic, then Wegovy) achieves mainstream celebrity and social media visibility; "peptide" enters common vocabulary as a synonym for a powerful, glamorous injectable.
+            2022-2023Branded GLP-1 shortages push demand toward compounding pharmacies and overseas sellers; compounded and grey-market semaglutide/tirzepatide become widely available online.
+            2023-2024Longevity and biohacker podcasts and TikTok/Instagram creators broaden the peptide conversation well beyond weight loss - BPC-157, growth-hormone secretagogues and others are folded into the same content genre. The FDA issues warning letters over compounded semaglutide/tirzepatide quality and begins restricting compounding as branded shortages are resolved.2
+            2024-2026"Peptide clinics" and telehealth-adjacent sellers proliferate, several outside standard medical regulation; regulators in the US, UK and NZ issue repeated public warnings about unapproved peptide products sold online, with limited practical enforcement against small-parcel imports.
+
+        ## The influencer and clinic economy
+        Unlike the older bodybuilding-forum culture, which was built on pseudonymous peer discussion, the current peptide wave is dominated by named influencers - podcasters, physique coaches, and self-styled "longevity" doctors - whose business model frequently includes selling the products they discuss, or referral relationships with online "peptide clinics" and telehealth services that will prescribe or dispense with minimal in-person assessment. This is a meaningfully different structure from the forum era described in the companion essay on bodybuilding culture: authority now rests on production values and personal brand rather than on a visible, arguable track record, and the commercial incentive to downplay risk is direct and immediate rather than incidental.
+
+          The evidence gap is wide relative to the marketing confidence. BPC-157's tissue-repair effects rest almost entirely on animal and in-vitro data; there are no adequately powered human trials establishing efficacy or a safety profile for the doses and durations being self-administered, and the version circulating online is unapproved for human use everywhere.3 Growth-hormone secretagogues carry the same theoretical concerns as growth hormone itself - fluid retention, insulin resistance, and in overuse, acromegalic change - without the monitoring a prescriber would normally apply. None of this is a niche concern: the same social feeds recommending these compounds routinely reach a general wellness audience with no bodybuilding or biohacking background at all.
+
+        ## Regulatory cat-and-mouse
+        The regulatory picture mirrors what has already played out with SARMs and research-chemical nootropics: individual peptides are sold through websites, often hosted overseas, labelled "for research purposes only," a fiction that provides no genuine legal protection to the seller but does create real ambiguity for enforcement and real risk for the buyer, since there is no requirement for pharmaceutical-grade manufacture, sterility testing, or accurate labelling of actual peptide content. Independent testing of grey-market vials has repeatedly found underdosing, overdosing, and contamination.4 In New Zealand, Medsafe's unapproved-medicines framework covers this territory in principle, but - as with nootropics and SARMs - enforcement against personal-use imports lags well behind the pace of the market, and most patients who are using these products will not have encountered any barrier to obtaining them.
+
+        ## What this means in the consultation room
+        Because this wave reaches a broader and less specialist audience than earlier IPED and nootropics culture, it is worth asking about across a wider range of patients than "who looks like a bodybuilder" - anyone engaging with weight-loss or longevity content on social media is a plausible candidate. Practical questions worth asking: is a GLP-1 agonist genuinely prescribed and pharmacy-dispensed, or sourced online or through a compounding-adjacent telehealth service with limited oversight; is any other peptide (BPC-157, TB-500, a secretagogue, melanotan II) being self-injected, and from where; and does the patient understand that "research chemical" labelling means no regulator has verified what is actually in the vial. Unexplained injection-site reactions, new pigmented lesions in a patient using a tanning peptide, or unexpected glycaemic or weight change in someone not on a prescribed GLP-1 are all reasonable prompts to ask directly.
+
+          Ask without judgment
+          "There's a lot of peptide content on social media at the moment - is that something you've looked into or tried?" opens the door for patients who would never volunteer this unprompted, particularly those who do not see themselves as part of any "using" subculture at all.
+
+        ## A nuanced position
+        The peptide wave is not simply a repeat of the SARMs or nootropics grey markets, though it shares their regulatory loopholes and sourcing risks - it is distinguished by riding on the coattails of a genuinely transformative, well-evidenced drug class, which lends borrowed credibility to a much larger set of compounds with far weaker evidence. That borrowed credibility, combined with an influencer-and-clinic commercial structure with less peer correction than the old forums had, is what makes this current moment worth understanding specifically, rather than filing it under a generic "internet health fad" heading.
+
+          ### References
+          
+            - US Food and Drug Administration. FDA's concerns with unapproved GLP-1 related products. FDA consumer updates, 2023-2024.
+            - US Food and Drug Administration. Compounded semaglutide and tirzepatide: shortage resolution and enforcement guidance. FDA drug shortage database and related guidance, 2024.
+            - Sikiric P, Seiwerth S, Rucman R, et al. Stable gastric pentadecapeptide BPC 157: novel therapy in gastrointestinal tract. Curr Pharm Des. 2011;17(16):1612-1632 (representative of the preclinical literature base; no adequately powered human efficacy/safety trials exist for self-administered use).
+            - Independent laboratory testing programmes (e.g. those run by anti-doping and consumer-protection bodies) have repeatedly found inaccurate labelling and contamination in peptide products sold online; see WADA and national medicines-regulator alerts on unapproved peptide products, various years.

@@ -1,0 +1,102 @@
+---
+layout: essay
+title: The new heart failure
+category: clinical
+publishedDate: 2026-01-01
+updatedDate: 2026-01-01
+draft: false
+---
+
+
+## Overview
+
+
+If you trained more than five years ago, what you learned about heart failure is now wrong in a specific and consequential way. Not the pathophysiology - that hasn't changed. The treatment. The whole approach.
+
+        The old approach, which is still in many GPs' heads because nobody ran a CME blitz to update it: ACE inhibitor first, titrate to target dose. Then add a beta-blocker, titrate to target dose. Then maybe add spironolactone if the patient isn't doing well. Sequential. Cautious. Each rung of the ladder taking months.
+
+        The new approach, supported by 2021 ESC guidelines, the 2022 AHA/ACC/HFSA guidelines, the 2023 NZMJ position statement, and a substantial body of trial evidence: start all four classes of drugs early, in low doses, in roughly any order, and titrate them up together. Four pillars, not a ladder. A patient newly diagnosed with HFrEF should be on all four within weeks, not years.
+
+        This shift adds approximately five to six years of life expectancy compared with the old dual-therapy approach. The number is large enough that it should make the gap between current evidence and current NZ practice the most clinically urgent thing on the cardiology-meets-primary-care boundary. It should be making us uncomfortable. Mostly it isn't, because most of the change happened during COVID and the textbooks haven't caught up.
+
+        This is what the change actually is, what the trials show, where NZ-specific access has finally landed, and what the work in clinic looks like.
+
+        ## Part I  -  The four pillars
+        The four classes, briefly:
+
+        **Renin-angiotensin system inhibition.** ACE inhibitor (enalapril, lisinopril, cilazapril), angiotensin receptor blocker (losartan, candesartan), or - and this is the new bit - angiotensin receptor-neprilysin inhibitor (sacubitril/valsartan, branded Entresto). The ARNI is the preferred first-line agent in current guidelines based on the PARADIGM-HF trial, which showed sacubitril/valsartan outperformed enalapril with an estimated 5-year NNT of 21 to prevent one all-cause death and 14 to prevent one CV death or HF hospitalisation [1]. NZ funded ARNI without Special Authority requirements in 2021 [2].
+
+        **Beta-blocker.** Bisoprolol, carvedilol, metoprolol succinate (slow-release) - the three with HF mortality data. Atenolol does not have heart failure mortality data and is not a substitute. The benefit is robust; the trial base goes back to the late 1990s [3].
+
+        **Mineralocorticoid receptor antagonist.** Spironolactone is the NZ first-line MRA. Eplerenone is available with Special Authority if spironolactone is not tolerated (typically because of gynaecomastia in male patients). The mortality benefit was established in RALES (1999) and EMPHASIS-HF (2011) [4,5].
+
+        **SGLT2 inhibitor.** This is the new one. Empagliflozin or dapagliflozin. The mechanism in heart failure is not fully understood and is almost certainly not primarily about glucose - the benefit is present in patients without diabetes, manifests within weeks (too fast for any plausible glucose-lowering mechanism), and is largely independent of HbA1c, weight, or blood pressure changes. The DAPA-HF (2019) and EMPEROR-Reduced (2020) trials established SGLT2i as the fourth pillar of HFrEF therapy [6,7]. The benefit is roughly comparable in magnitude to each of the other three pillars, which is striking for a drug class that hadn't been on the heart failure radar a decade ago.
+
+        The shift in paradigm from "sequential titration to target" to "all four early, low dose" rests on a few specific findings. First, the benefits of each class accrue largely independently - there is no need to optimise one before adding the next [8]. Second, patients on triple or quadruple therapy at low doses do better than patients on monotherapy at target dose [9]. Third, every month a patient is on suboptimal therapy is a month of avoidable risk; the cumulative delay to quadruple therapy under the old sequential model could easily be a year or more, during which the patient is, in trial terms, in the placebo arm of three of four medications.
+
+        The STRONG-HF trial (Mebazaa et al, *Lancet* 2022) tested rapid uptitration directly: patients hospitalised for acute heart failure were randomised to either rapid uptitration of guideline-directed therapy to 100% target doses within two weeks, or usual care [10]. The trial was stopped early for benefit. The 180-day primary endpoint of HF readmission or all-cause mortality was substantially reduced in the high-intensity arm [10]. The implication is not subtle: faster is safer, not riskier, when supported by appropriate monitoring.
+
+        The aggregate effect of full four-pillar therapy versus the old ACE-i-plus-beta-blocker baseline is the addition of approximately five to six years of survival, depending on age and baseline function, in HFrEF patients [11]. This is comparable in magnitude to some cancer therapies whose introduction would dominate the news for a fortnight. The four-pillar shift, despite the same magnitude of effect, has made very few headlines.
+
+        ## Part II  -  The HFpEF story
+        For most of cardiology's history, heart failure with preserved ejection fraction was the disease cardiology had nothing for. Diuretics for symptoms. Treat the comorbidities. No drug class had been shown to reduce mortality or hospitalisation in HFpEF in adequately powered trials. Multiple candidates - ACE inhibitors, ARBs, beta-blockers, spironolactone - had been tested and had failed to deliver convincing benefit. HFpEF accounts for roughly half of all heart failure presentations, and clinicians had been managing it largely by reflex for thirty years.
+
+        That changed in 2021.
+
+        EMPEROR-Preserved (Anker et al, *NEJM* 2021) randomised 5,988 patients with HFpEF (LVEF >40%) to empagliflozin 10 mg daily or placebo. The primary composite endpoint of cardiovascular death or HF hospitalisation was reduced by 21%, driven mainly by a 29% reduction in HF hospitalisation [12]. The benefit was present regardless of diabetes status, regardless of baseline ejection fraction across the >40% range, and was consistent across most prespecified subgroups [12].
+
+        DELIVER (Solomon et al, *NEJM* 2022) replicated the finding with dapagliflozin in a similar HFpEF population, with similar effect size, including in patients with previous reduced EF that had recovered (HFimpEF) [13].
+
+        The clinical implication is a paradigm shift in HFpEF management: there is now an effective evidence-based therapy for a condition that had none for decades. Every patient with HFpEF - diabetic or not - should be considered for SGLT2 inhibitor therapy. The 2023 ESC focused update gave SGLT2i a Class 1A recommendation for HFmrEF and HFpEF [14].
+
+        The NZ access situation for HFpEF is the unfinished part of this story. As of late 2025, Pharmac's funding for empagliflozin in heart failure remains restricted to HFrEF - patients with HFpEF or HFmrEF do not have funded access through the heart failure pathway, only through the diabetes Special Authority criteria if they qualify by HbA1c [15]. The 2023 NZMJ position statement called for full funding without Special Authority for all HFpEF patients [2]. As of 2026, this remains an unresolved equity gap.
+
+        The practical consequence: a non-diabetic patient with HFpEF in NZ in 2026 either self-funds empagliflozin (approximately $80-100 per month, depending on supply), goes without, or qualifies through some other pathway. The drug exists. The evidence is settled. The funding is incomplete.
+
+        ## Part III  -  The Pharmac shift, December 2024
+        Worth pausing on, because it's recent and consequential and most non-cardiology clinicians don't have the timeline straight.
+
+        Pharmac first funded empagliflozin in February 2021, but only for type 2 diabetes patients meeting specific criteria - the so-called "high cardiovascular risk" Special Authority that excluded most heart failure patients without diabetes. The HFrEF community spent the next three years arguing for widened access, supported by accumulating trial evidence, the 2023 NZMJ position statement, the Heart Foundation, and increasingly painful international comparisons.
+
+        On 1 December 2024, that changed. Pharmac widened access to empagliflozin to include all patients with chronic heart failure with reduced ejection fraction, without diabetes-related Special Authority requirements. The agency estimated that approximately 18,000 New Zealanders would benefit in the first year of widened access, rising to around 33,000-37,000 per year by year five [15,16]. The Heart Foundation called the decision a "game changer" - accurately, given that it brought NZ in line with international best practice for the first time [16].
+
+        The implications for primary care are direct. Every NZ patient with HFrEF, regardless of diabetes status, is now eligible for funded empagliflozin. The drug is once-daily, 10 mg orally, with no titration required - start dose is treatment dose. Renal function does need monitoring (it can be initiated down to eGFR ~20 mL/min/1.73m²; the NZ Special Authority used to specify higher eGFR cutoffs and these have been progressively relaxed). The main practical issues are euglycaemic diabetic ketoacidosis (rare but serious; warn patients, hold the drug during acute illness or fasting), genital mycotic infections (common but manageable), and a small initial dip in eGFR that is haemodynamic rather than nephrotoxic and recovers.
+
+        The combination of the four-pillar paradigm shift and the December 2024 Pharmac decision means that NZ HFrEF management in 2026 looks fundamentally different from NZ HFrEF management in 2023. A patient newly diagnosed with HFrEF in 2026 should, within a few weeks, be on:
+
+        - An ARNI (sacubitril/valsartan) or, if not tolerated, an ACE inhibitor or ARB- A beta-blocker with HF mortality data (bisoprolol, carvedilol, or slow-release metoprolol)- An MRA (spironolactone, or eplerenone if intolerant)- An SGLT2 inhibitor (empagliflozin)
+        All four. Started in any order. Low doses initially. Titrated up over weeks rather than years. With STRONG-HF-style monitoring (BP, HR, U&E, NT-proBNP if available) at each titration step.
+
+        This is not aspirational. It is now standard care. The gap is implementation.
+
+        ## Part IV  -  Where NZ practice actually sits
+        The honest version: the gap between this standard and what is currently happening in NZ primary care is substantial, and worth being specific about rather than vague.
+
+        Australian and international registry data on quadruple therapy uptake in HFrEF are sobering. The Australian nurse-led optimisation study published in 2025 found baseline four-pillar therapy in only 11.1% of eligible HFrEF patients before intervention, rising to 49.8% post-intervention [17]. Those are *post-intervention* numbers from a structured optimisation programme. Real-world NZ figures are not systematically reported but are unlikely to be substantially better than the Australian baseline.
+
+        The reasons for the gap are mostly mundane. Newly diagnosed HFrEF patients often see cardiology once for diagnosis and titration planning, then return to primary care for ongoing management. The cardiology letter often recommends initiation of one or two pillars. The GP, reasonably, follows the letter. There may not be a clear handover of who is responsible for the remaining pillars or for the titration schedule. Six months later the patient is on enalapril and bisoprolol and nothing else, and nobody has revisited the plan. This is not negligence; it is a system designed for sequential management still operating in a four-pillar world.
+
+        The specific points where the system tends to lose patients:
+
+        **Initiation gap**: Patients leave hospital after an HF admission on one or two pillars rather than four, usually because the team is focused on getting them out alive and stable rather than on full quadruple therapy.**Discharge handover gap**: The cardiology discharge plan often recommends "GP to up-titrate" without specifying which agents to add when, or what the targets are.**Primary care titration gap**: The 15-minute consult is not structurally well-suited to a four-drug titration plan with electrolyte monitoring, blood pressure checks, and symptom review at each step.**MRA underuse specifically**: Spironolactone is consistently the most under-prescribed of the four pillars internationally, partly because of the perceived hyperkalaemia risk (which is real but manageable with monitoring) and partly because adding a fourth drug to an elderly patient on enalapril, bisoprolol, and frusemide feels uncomfortable when each addition individually feels like overshooting.**Frusemide overuse**: Loop diuretics treat congestion but do not modify disease. Patients should generally be on the *lowest dose* of frusemide that controls congestion, not the highest tolerated dose. The four pillars often allow frusemide to be reduced or stopped entirely. The pattern of "increase the frusemide" as a default response to symptoms, without revisiting whether the four pillars are at appropriate doses, is the wrong reflex.
+        The clinical task in primary care, for any patient with HFrEF, is genuinely just: which of the four pillars are they on, at what doses, and what is the plan for getting closer to target? If the answer involves fewer than four drugs without a specific contraindication or intolerance documented, that's the gap.
+
+        ## Part V  -  A working position
+        What this looks like in clinic, briefly:
+
+        **For the patient with established HFrEF**, the question is whether they are on all four pillars. If not - and they often are not - the work is identifying which pillars are missing and why. Sometimes the answer is a documented intolerance and the gap is appropriate. Often the answer is "they were never started." If so, start them. Empagliflozin is the easiest - once daily, no titration, monitor renal function and warn about euglycaemic DKA. The MRA is the most often missed and is worth a specific look.
+
+        **For the patient newly diagnosed with HFrEF**, the planning conversation is different from what it used to be. The expectation is four drugs within weeks, not three drugs over a year. Cardiology referral is appropriate; the cardiology letter should be specific about the titration plan; if it isn't, ringing the cardiologist for clarification is reasonable.
+
+        **For the patient with HFpEF**, recognise that they are no longer in the "we have nothing for you" category. Empagliflozin or dapagliflozin should be discussed even though Pharmac funding for non-diabetic HFpEF in NZ is currently incomplete. The conversation about self-funding the medication is uncomfortable but appropriate; this is one of the live equity issues in NZ heart failure care.
+
+        **On loop diuretics**: review the dose periodically. Patients on frusemide for years often have the dose set during an acute decompensation that is no longer relevant. Once the four pillars are in place, the diuretic dose can often come down.
+
+        **On monitoring**: the four-pillar regimen requires periodic U&E, particularly within 1-2 weeks of any titration. Hyperkalaemia (MRA) and worsening renal function (ARNI, SGLT2i in early phase) are the two that need watching. NT-proBNP, if available, is useful for tracking response and titration adequacy.
+
+        **On expectations**: full four-pillar therapy at appropriate doses adds approximately five to six years of life expectancy compared with the old approach. This is one of the clearest examples in current medicine of evidence directly translating to outcome. The work is implementation, not innovation. Most of what determines whether a particular NZ patient with HFrEF gets those years is whether their primary care team is operating on the new paradigm or the old one.
+
+        The old paradigm was reasonable when it was current. It isn't current. The new approach is settled, the access is mostly there as of December 2024, and the gap is now almost entirely about who has updated their mental model and who hasn't. That, more than any individual prescribing decision, is the work.
+
+        ### References
+        - McMurray JJV, Packer M, Desai AS, et al. Angiotensin-neprilysin inhibition versus enalapril in heart failure. N Engl J Med. 2014;371(11):993-1004. doi:10.1056/NEJMoa1409077- Lund M, Devlin G, Gabriel R, et al. 2023 position statement on improving management for patients with heart failure in Aotearoa New Zealand. N Z Med J. 2024;137(1590):82-92. Available from: https://nzmj.org.nz/journal/vol-137-no-1590/2023-position-statement-on-improving-management-for-patients-with-heart-failure-in-aotearoa-new-zealand- CIBIS-II Investigators. The Cardiac Insufficiency Bisoprolol Study II (CIBIS-II): a randomised trial. Lancet. 1999;353(9146):9-13. doi:10.1016/S0140-6736(98)11181-9- Pitt B, Zannad F, Remme WJ, et al. The effect of spironolactone on morbidity and mortality in patients with severe heart failure. N Engl J Med. 1999;341(10):709-17. doi:10.1056/NEJM199909023411001- Zannad F, McMurray JJV, Krum H, et al. Eplerenone in patients with systolic heart failure and mild symptoms. N Engl J Med. 2011;364(1):11-21. doi:10.1056/NEJMoa1009492- McMurray JJV, Solomon SD, Inzucchi SE, et al. Dapagliflozin in patients with heart failure and reduced ejection fraction. N Engl J Med. 2019;381(21):1995-2008. doi:10.1056/NEJMoa1911303- Packer M, Anker SD, Butler J, et al. Cardiovascular and renal outcomes with empagliflozin in heart failure. N Engl J Med. 2020;383(15):1413-24. doi:10.1056/NEJMoa2022190- McDonagh TA, Metra M, Adamo M, et al. 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2021;42(36):3599-726. doi:10.1093/eurheartj/ehab368- Vaduganathan M, Claggett BL, Jhund PS, et al. Estimating lifetime benefits of comprehensive disease-modifying pharmacological therapies in patients with heart failure with reduced ejection fraction: a comparative analysis of three randomised controlled trials. Lancet. 2020;396(10244):121-8. doi:10.1016/S0140-6736(20)30748-0- Mebazaa A, Davison B, Chioncel O, et al. Safety, tolerability and efficacy of up-titration of guideline-directed medical therapies for acute heart failure (STRONG-HF): a multinational, open-label, randomised, trial. Lancet. 2022;400(10367):1938-52. doi:10.1016/S0140-6736(22)02076-1- Heidenreich PA, Bozkurt B, Aguilar D, et al. 2022 AHA/ACC/HFSA Guideline for the Management of Heart Failure. J Am Coll Cardiol. 2022;79(17):e263-421. doi:10.1016/j.jacc.2021.12.012- Anker SD, Butler J, Filippatos G, et al. Empagliflozin in heart failure with a preserved ejection fraction. N Engl J Med. 2021;385(16):1451-61. doi:10.1056/NEJMoa2107038- Solomon SD, McMurray JJV, Claggett B, et al. Dapagliflozin in heart failure with mildly reduced or preserved ejection fraction. N Engl J Med. 2022;387(12):1089-98. doi:10.1056/NEJMoa2206286- McDonagh TA, Metra M, Adamo M, et al. 2023 Focused Update of the 2021 ESC Guidelines for the diagnosis and treatment of acute and chronic heart failure. Eur Heart J. 2023;44(37):3627-39. doi:10.1093/eurheartj/ehad195- Pharmac. New heart medicine for 18,000 New Zealanders [Internet]. Wellington: Pharmac; 2024 [cited 2026 May 2]. Available from: https://www.pharmac.govt.nz/news-and-resources/news/new-heart-medicine-for-18000-new-zealanders- Heart Foundation NZ. Heart Foundation welcomes news of funded treatment for heart failure patients [Internet]. Auckland: Heart Foundation; 2024 [cited 2026 May 2]. Available from: https://www.heartfoundation.org.nz/about-us/news/media-releases/heart-foundation-welcomes-news-of-funded-treatment-for-heart-failure-patients- Boyle AJ, Lund M, et al. Nurse-led, remote optimisation of guideline-directed medical therapy in patients with heart failure and reduced ejection fraction across Australia. J Clin Med. 2025;14(15):5371. doi:10.3390/jcm14155371
