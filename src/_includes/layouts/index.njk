@@ -7,7 +7,7 @@ layoutCss: layouts.css
   <header class="wd-pagehead">
     <h1 class="wd-pagetitle">{{ title }}</h1>
     {% if description %}
-    <p style="font-size: var(--text-lg); color: var(--ink-soft); line-height: 1.6;">
+    <p class="wd-pagedesc">
       {{ description }}
     </p>
     {% endif %}
@@ -32,6 +32,6 @@ layoutCss: layouts.css
     {% endfor %}
   </div>
   {% else %}
-  <p style="color: var(--muted);">No items yet.</p>
+  <p class="wd-empty-state">No items yet.</p>
   {% endif %}
 </div>

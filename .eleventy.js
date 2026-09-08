@@ -124,6 +124,11 @@ module.exports = function(eleventyConfig) {
     return collection ? collection.length : 0;
   });
 
+// Pad string with leading zeros
+  eleventyConfig.addFilter('padStart', function(str, length, char) {
+    return String(str).padStart(length, char);
+  });
+  
   // ============================================================
   // PASSTHROUGH COPY
   // ============================================================

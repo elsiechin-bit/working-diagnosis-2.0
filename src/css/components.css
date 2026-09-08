@@ -49,6 +49,29 @@
 }
 
 .wd-pagemeta span {
+  .wd-pagedesc {
+  font-size: var(--text-lg);
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.wd-toc-entry-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.wd-badge-soon {
+  font-family: var(--font-mono);
+  font-size: 0.75em;
+  color: var(--muted);
+}
+
+.wd-empty-state {
+  color: var(--muted);
+}
+
   display: inline;
 }
 

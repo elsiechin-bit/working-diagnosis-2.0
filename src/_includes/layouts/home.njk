@@ -17,12 +17,12 @@ layout: base
     <div class="section-label">{{ group.list[0].category | upper }}</div>
     {% for item in group.list %}
     {% if item.comingSoon %}
-    <div class="toc-entry" style="opacity: 0.5; cursor: not-allowed; pointer-events: none;">
+   <div class="toc-entry wd-toc-entry-disabled">
       <span class="entry-num">{{ item.num }}</span>
       <div class="entry-body">
         <div class="entry-cat">{{ item.label }}</div>
         <div class="entry-title">{{ item.title }}</div>
-        <div class="entry-desc">{{ item.description }} <span style="font-family: var(--font-mono); font-size: 0.75em; color: var(--muted);">[Coming soon]</span></div>
+        <div class="entry-desc">{{ item.description }}  <span class="wd-badge-soon">[Coming soon]</span></div>
       </div>
       <div class="entry-meta">
         <span class="entry-tag">Soon</span>
