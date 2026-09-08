@@ -1,0 +1,33 @@
+---
+layout: base
+layoutCss: layouts.css
+---
+
+<div class="article">
+  {% if breadcrumb %}
+  <div class="wd-breadcrumb">
+    <a href="/">HOME</a> · <b>{{ breadcrumb }}</b>
+  </div>
+  {% endif %}
+
+  <header class="wd-pagehead">
+    <h1 class="wd-pagetitle">{{ title }}</h1>
+    {% if description %}
+    <p style="font-size: var(--text-lg); color: var(--ink-soft); line-height: 1.6; max-width: 700px;">
+      {{ description }}
+    </p>
+    {% endif %}
+    {% if publishedDate or updatedDate %}
+    <div class="wd-pagemeta">
+      {% if publishedDate %}
+      <span>Reviewed {{ publishedDate | dateShort }}</span>
+      {% endif %}
+      {% if updatedDate %}
+      <span>Updated {{ updatedDate | dateShort }}</span>
+      {% endif %}
+    </div>
+    {% endif %}
+  </header>
+
+  {{ content | safe }}
+</div>

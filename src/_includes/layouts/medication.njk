@@ -1,0 +1,12 @@
+---
+layout: base
+layoutCss: layouts.css
+---
+
+<div class="article">
+  {% if breadcrumb %}<div class="wd-breadcrumb"><a href="/">HOME</a> · <b>{{ breadcrumb }}</b></div>{% endif %}
+  <header class="wd-pagehead">
+    <h1 class="wd-pagetitle">{{ title }}</h1>
+  </header>
+  {{ content | safe }}
+</div>

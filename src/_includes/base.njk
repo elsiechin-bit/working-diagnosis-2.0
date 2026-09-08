@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-NZ">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="language" content="en">
+  <title>{{ title or site.name }}</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/components.css">
+  {% if layoutCss %}<link rel="stylesheet" href="/css/{{ layoutCss }}">{% endif %}
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='50' y='70' font-size='80' text-anchor='middle' fill='%231B7AA6' font-family='sans-serif' font-weight='bold'>WD</text></svg>">
+</head>
+<body>
+  {% include "components/header.njk" %}
+
+  <main class="wd-main">
+    {{ content | safe }}
+  </main>
+
+  {% include "components/footer.njk" %}
+
+  <!-- Scripts -->
+  <script src="/js/global.js" defer></script>
+  {% if layoutJs %}<script src="/js/{{ layoutJs }}" defer></script>{% endif %}
+</body>
+</html>

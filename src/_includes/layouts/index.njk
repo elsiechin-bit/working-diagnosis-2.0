@@ -1,0 +1,37 @@
+---
+layout: base
+layoutCss: layouts.css
+---
+
+<div class="article">
+  <header class="wd-pagehead">
+    <h1 class="wd-pagetitle">{{ title }}</h1>
+    {% if description %}
+    <p style="font-size: var(--text-lg); color: var(--ink-soft); line-height: 1.6;">
+      {{ description }}
+    </p>
+    {% endif %}
+  </header>
+
+  {% if items %}
+  <div class="toc">
+    {% for item in items %}
+    <a href="{{ item.url }}" class="toc-entry">
+      <span class="entry-num">{{ loop.index | string | padStart(2, '0') }}</span>
+      <div class="entry-body">
+        <div class="entry-title">{{ item.data.title }}</div>
+        {% if item.data.description %}
+        <div class="entry-desc">{{ item.data.description }}</div>
+        {% endif %}
+      </div>
+      <div class="entry-meta">
+        {% if item.data.readTime %}<span class="entry-tag">⏱ {{ item.data.readTime }}min</span>{% endif %}
+        <span class="entry-arrow">→</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p style="color: var(--muted);">No items yet.</p>
+  {% endif %}
+</div>

@@ -1,0 +1,445 @@
+/* ============================================================
+   WORKING DIAGNOSIS - COMPONENT STYLES
+   Reusable components for all page types
+   ============================================================ */
+
+/* ---- PAGE STRUCTURE ---- */
+.wd-main {
+  min-height: 60vh;
+}
+
+.wd-pagehead {
+  padding: var(--space-xl) 0 var(--space-lg);
+  border-bottom: 1px solid var(--border);
+}
+
+.wd-breadcrumb {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: var(--space-md);
+}
+
+.wd-breadcrumb b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.wd-pagetitle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-md);
+  max-width: 28ch;
+}
+
+.wd-pagemeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px var(--space-md);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.wd-pagemeta span {
+  display: inline;
+}
+
+.wd-pagemeta span:not(:last-child)::after {
+  content: ' ·';
+  margin-left: var(--space-sm);
+}
+
+/* ---- TABLE OF CONTENTS / INDEX ---- */
+.toc {
+  margin-top: 0;
+}
+
+.toc-header {
+  display: none;
+}
+
+.toc-entry {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.12s;
+}
+
+.toc-entry:hover {
+  background: var(--bg2);
+}
+
+.toc-entry:hover .entry-num {
+  color: var(--accent);
+}
+
+.toc-entry:hover .entry-title {
+  color: var(--accent);
+}
+
+.entry-num {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.1rem;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  width: 48px;
+  flex: none;
+  padding: 0 var(--space-md) 0 0;
+  transition: color 0.12s;
+  text-transform: uppercase;
+  text-align: right;
+}
+
+.entry-body {
+  flex: 1;
+  padding: 0;
+}
+
+.entry-cat {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.entry-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  transition: color 0.12s;
+}
+
+.entry-desc {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.entry-meta {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0 0 0 var(--space-sm);
+}
+
+.entry-tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 3px 6px;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--muted);
+  flex: none;
+  border: 1px solid var(--border);
+}
+
+.entry-arrow {
+  font-size: 0.9rem;
+  color: var(--muted);
+  flex: none;
+  transition: color 0.12s;
+}
+
+.toc-entry:hover .entry-arrow {
+  color: var(--accent);
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: var(--space-md) 0 var(--space-sm);
+  margin-top: var(--space-md);
+  font-weight: 600;
+  border-top: 1px solid var(--border);
+}
+
+/* ---- CALLOUTS & ALERTS ---- */
+.callout {
+  border-left: 4px solid var(--accent-ink);
+  padding: var(--space-md) var(--space-lg);
+  background: var(--accent-soft);
+  margin: var(--space-lg) 0;
+  border-radius: var(--radius-md);
+}
+
+.callout.info {
+  border-left-color: var(--info);
+  background: var(--info-soft);
+}
+
+.callout.danger {
+  border-left-color: var(--danger);
+  background: var(--danger-soft);
+}
+
+.callout.warn {
+  border-left-color: var(--warn);
+  background: var(--warn-soft);
+}
+
+.callout.ok {
+  border-left-color: var(--ok);
+  background: var(--ok-soft);
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout strong {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+/* ---- CLINICAL PEARL ---- */
+.clinical-pearl {
+  border-left: 3px solid var(--accent);
+  padding: var(--space-md) var(--space-lg);
+  background: transparent;
+  margin: var(--space-lg) 0;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+.clinical-pearl::before {
+  content: '💡 ';
+  margin-right: var(--space-sm);
+}
+
+.clinical-pearl p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- CLINICAL NOTE ---- */
+.clinical-note {
+  background: var(--surface);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--accent);
+  margin: var(--space-lg) 0;
+}
+
+.clinical-note p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- SUMMARY CARD ---- */
+.summary-card {
+  background: linear-gradient(135deg, var(--accent-soft) 0%, rgba(27, 122, 166, 0.08) 100%);
+  border: 1px solid var(--line);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  margin: var(--space-lg) 0;
+}
+
+.summary-card h3 {
+  margin-top: 0;
+  color: var(--accent);
+  font-size: 1rem;
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.summary-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- BADGES & TAGS ---- */
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.badge.primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.badge.danger {
+  background: var(--danger);
+  color: white;
+  border-color: var(--danger);
+}
+
+.badge.ok {
+  background: var(--ok);
+  color: white;
+  border-color: var(--ok);
+}
+
+/* ---- BUTTONS ---- */
+.btn {
+  display: inline-block;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-family: var(--font-display);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: var(--text-base);
+}
+
+.btn:hover {
+  background: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn.secondary {
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--border);
+}
+
+.btn.secondary:hover {
+  background: var(--bg2);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ---- REFERENCE/CITATION LIST ---- */
+.references-section {
+  margin-top: var(--space-3xl);
+  padding-top: var(--space-2xl);
+  border-top: 1px solid var(--line);
+}
+
+.references-section h3 {
+  font-size: var(--text-xl);
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0;
+}
+
+.references-section ol {
+  list-style-position: outside;
+  margin-left: var(--space-lg);
+}
+
+.references-section li {
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-sm);
+  line-height: var(--lh-normal);
+  color: var(--ink-soft);
+}
+
+/* ---- FOOTNOTES ---- */
+.footnotes {
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-lg);
+  margin-top: var(--space-2xl);
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+.footnotes ol {
+  margin-left: var(--space-lg);
+}
+
+.footnotes li {
+  margin-bottom: var(--space-sm);
+}
+
+/* ---- BACK LINK ---- */
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.back-link::before {
+  content: '←';
+  font-size: 1.2em;
+}
+
+.back-link:hover {
+  color: var(--accent2);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .entry-num {
+    width: 40px;
+    padding-right: var(--space-sm);
+    font-size: 0.9rem;
+  }
+
+  .entry-meta {
+    gap: var(--space-xs);
+    padding-left: var(--space-xs);
+  }
+
+  .entry-tag {
+    display: none;
+  }
+
+  .entry-arrow {
+    font-size: 0.8rem;
+  }
+
+  .callout,
+  .clinical-pearl,
+  .clinical-note,
+  .summary-card {
+    padding: var(--space-md);
+  }
+}

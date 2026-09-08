@@ -1,0 +1,85 @@
+{
+  "main": [
+    {
+      "num": "01",
+      "label": "GUIDELINES",
+      "title": "NZ Guideline Comparisons",
+      "description": "NZ, Australian and international guidance alignment and divergence.",
+      "url": "/topics/",
+      "category": "core",
+      "collection": "topics",
+      "icon": "📋"
+    },
+    {
+      "num": "02",
+      "label": "MEDICATIONS",
+      "title": "Medication Calculators",
+      "description": "Conversions, tapering, drug reference and deprescribing tools.",
+      "url": "/medications/",
+      "category": "core",
+      "collection": "medications",
+      "icon": "💊"
+    },
+    {
+      "num": "03",
+      "label": "CLINICAL TOOLS",
+      "title": "Risk Scores & Decision Tools",
+      "description": "CHA₂DS₂-VASc, PREDICT, COPD staging, cervical screening and more.",
+      "url": "/calculators/",
+      "category": "core",
+      "collection": "calculators",
+      "icon": "🧮"
+    },
+    {
+      "num": "04",
+      "label": "PROCEDURES",
+      "title": "Procedural Guides & Techniques",
+      "description": "Clinical procedures, injection techniques, minor surgery and equipment.",
+      "url": "/procedures/",
+      "category": "core",
+      "collection": "procedures",
+      "icon": "🔧"
+    },
+    {
+      "num": "05",
+      "label": "EXPLAINERS",
+      "title": "Clinical Topics At a Glance",
+      "description": "Mechanism explainers for antidepressants, statins, antihypertensives.",
+      "url": "/explainers/",
+      "category": "learning",
+      "collection": "explainers",
+      "icon": "🧠"
+    },
+    {
+      "num": "06",
+      "label": "RESEARCH",
+      "title": "Research & Evidence",
+      "description": "Landmark trials, key findings and evidence interpretation.",
+      "url": "/research/",
+      "category": "learning",
+      "collection": "research",
+      "icon": "🔬"
+    },
+    {
+      "num": "07",
+      "label": "FIELD NOTES",
+      "title": "Essays & Reflections",
+      "description": "Consultation frameworks and essays from practice.",
+      "url": "/essays/",
+      "category": "practice",
+      "collection": "essays",
+      "icon": "📝"
+    },
+    {
+      "num": "08",
+      "label": "HANDOUTS",
+      "title": "Patient Handouts",
+      "description": "Plain-language guides for patients.",
+      "url": "/handouts/",
+      "category": "practice",
+      "collection": "handouts",
+      "icon": "📄",
+      "comingSoon": true
+    }
+  ]
+}
