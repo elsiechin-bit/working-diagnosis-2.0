@@ -1,3 +1,7 @@
+cat > src/_includes/layouts/home.njk << 'EOF'
+{% extends "base.njk" %}
+
+{% block content %}
 <section class="hero">
   <h1>Clinical reference <em>&amp; tools</em></h1>
   <div class="hero-search">
@@ -7,7 +11,7 @@
 </section>
 
 <section class="toc">
-  <div class="toc-noresults" id="noRes" style="display:none">No results. Try <a href="/explainers/">Explainers</a> or <a href="/essays/">Field Notes</a>.</div>
+  <div class="toc-noresults" id="noRes" style="display:none">No results.</div>
 
   <div class="section-label">Core reference</div>
   <a href="/topics/" class="toc-entry">
@@ -19,134 +23,7 @@
     </div>
     <div class="entry-meta">
       <span class="entry-tag">{{ collections.topics | length }} topics</span>
-      <span class="entry-arrow">→</span>
     </div>
   </a>
-
-  <a href="/medications/" class="toc-entry">
-    <span class="entry-num">02</span>
-    <div class="entry-body">
-      <div class="entry-cat">Medications</div>
-      <div class="entry-title">Medication Calculators</div>
-      <div class="entry-desc">Conversions, tapering, drug reference and deprescribing tools.</div>
-    </div>
-    <div class="entry-meta">
-      <span class="entry-tag">{{ collections.medications | length }} tools</span>
-      <span class="entry-arrow">→</span>
-    </div>
-  </a>
-
-  <a href="/calculators/" class="toc-entry">
-    <span class="entry-num">03</span>
-    <div class="entry-body">
-      <div class="entry-cat">Clinical Tools</div>
-      <div class="entry-title">Risk Scores &amp; Decision Tools</div>
-      <div class="entry-desc">CHA₂DS₂-VASc, PREDICT, COPD staging, cervical screening and more.</div>
-    </div>
-    <div class="entry-meta">
-      <span class="entry-tag">{{ collections.calculators | length }} calculators</span>
-      <span class="entry-arrow">→</span>
-    </div>
-  </a>
-
-  <a href="/procedures/" class="toc-entry">
-    <span class="entry-num">04</span>
-    <div class="entry-body">
-      <div class="entry-cat">Procedures</div>
-      <div class="entry-title">Procedural Guides &amp; Techniques</div>
-      <div class="entry-desc">Clinical procedures, injection techniques, minor surgery and equipment.</div>
-    </div>
-    <div class="entry-meta">
-      <span class="entry-tag">{{ collections.procedures | length }} guides</span>
-      <span class="entry-arrow">→</span>
-    </div>
-  </a>
-
-  <div class="section-label">Learning</div>
-  <a href="/explainers/" class="toc-entry">
-    <span class="entry-num">05</span>
-    <div class="entry-body">
-      <div class="entry-cat">Explainers</div>
-      <div class="entry-title">Clinical Topics At a Glance</div>
-      <div class="entry-desc">Mechanism explainers for antidepressants, statins, antihypertensives.</div>
-    </div>
-    <div class="entry-meta">
-      <span class="entry-tag">{{ collections.explainers | length }} topics</span>
-      <span class="entry-arrow">→</span>
-    </div>
-  </a>
-
-  <a href="/research/" class="toc-entry">
-    <span class="entry-num">06</span>
-    <div class="entry-body">
-      <div class="entry-cat">Research</div>
-      <div class="entry-title">Research &amp; Evidence</div>
-      <div class="entry-desc">Landmark trials, key findings and evidence interpretation.</div>
-    </div>
-    <div class="entry-meta">
-      <span class="entry-tag">{{ collections.research | length }} trials</span>
-      <span class="entry-arrow">→</span>
-    </div>
-  </a>
-
-  <div class="section-label">Practice</div>
-  <a href="/essays/" class="toc-entry">
-    <span class="entry-num">07</span>
-    <div class="entry-body">
-      <div class="entry-cat">Field Notes</div>
-      <div class="entry-title">Essays &amp; Reflections</div>
-      <div class="entry-desc">Consultation frameworks and essays from practice.</div>
-    </div>
-    <div class="entry-meta">
-      <span class="entry-tag">{{ collections.essays | length }} essays</span>
-      <span class="entry-arrow">→</span>
-    </div>
-  </a>
-
-  <a href="/handouts/" class="toc-entry">
-    <span class="entry-num">08</span>
-    <div class="entry-body">
-      <div class="entry-cat">Handouts</div>
-      <div class="entry-title">Patient Handouts</div>
-      <div class="entry-desc">Plain-language guides for patients.</div>
-    </div>
-    <div class="entry-meta">
-      <span class="entry-tag">{{ collections.handouts | length }} pages</span>
-      <span class="entry-arrow">→</span>
-    </div>
-  </a>
-
 </section>
-
-<script>
-  (function () {
-    const search = document.getElementById('siteSearch');
-    if (!search) return;
-    const toc = document.querySelector('.toc');
-    const entries = [...toc.querySelectorAll('.toc-entry')];
-    const labels = [...toc.querySelectorAll('.section-label')];
-    const noRes = document.getElementById('noRes');
-    function apply() {
-      const q = search.value.trim().toLowerCase();
-      entries.forEach(e => {
-        e.style.display = (!q || e.textContent.toLowerCase().includes(q)) ? '' : 'none';
-      });
-      labels.forEach(lab => {
-        let n = lab.nextElementSibling, anyVisible = false;
-        while (n && !n.classList.contains('section-label')) {
-          if (n.classList.contains('toc-entry') && n.style.display !== 'none') { anyVisible = true; break; }
-          n = n.nextElementSibling;
-        }
-        lab.style.display = anyVisible ? '' : 'none';
-      });
-      noRes.style.display = (q && !entries.some(e => e.style.display !== 'none')) ? '' : 'none';
-    }
-    search.addEventListener('input', apply);
-    search.addEventListener('keydown', ev => {
-      if (ev.key === 'Enter') {
-        const vis = entries.filter(e => e.style.display !== 'none' && e.tagName === 'A' && e.getAttribute('href'));
-        if (vis.length) window.location.href = vis[0].getAttribute('href');
-      }
-    });
-  })();
-</script>
+{% endblock %}
