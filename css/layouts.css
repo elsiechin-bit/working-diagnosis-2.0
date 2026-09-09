@@ -1,0 +1,109 @@
+/* ============================================================
+   WORKING DIAGNOSIS - LAYOUT-SPECIFIC STYLES
+   Page type-specific layout adjustments
+   ============================================================ */
+
+/* ---- ESSAY LAYOUT ---- */
+.article-narrow {
+  column-count: 2;
+  column-gap: 32px;
+  column-rule: 1px solid var(--line);
+}
+
+.article-narrow > h2,
+.article-narrow > hr,
+.article-narrow > table,
+.article-narrow > blockquote,
+.article-narrow > .takeaways-box,
+.article-narrow > .clinical-note,
+.article-narrow > .practical-box,
+.article-narrow > .evidence-callout,
+.article-narrow > .references-section {
+  column-span: all;
+}
+
+/* ---- CALCULATOR LAYOUT ---- */
+.calculator-container {
+  max-width: 800px;
+  margin: var(--space-2xl) auto;
+}
+
+.calculator-form {
+  background: var(--surface);
+  padding: var(--space-xl);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+}
+
+.calculator-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+  font-size: var(--text-sm);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.calculator-form input,
+.calculator-form select {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  margin-bottom: var(--space-md);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-family: inherit;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.calculator-form input:focus,
+.calculator-form select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+.calculator-result {
+  background: linear-gradient(135deg, var(--ok-soft) 0%, rgba(47, 125, 79, 0.08) 100%);
+  border: 1px solid var(--ok);
+  border-left: 4px solid var(--ok);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  margin-top: var(--space-lg);
+}
+
+.calculator-result-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--ok);
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+.calculator-result-label {
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin-top: var(--space-sm);
+  font-family: var(--font-mono);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+  .article-narrow {
+    column-count: 1;
+    column-rule: none;
+  }
+
+  .calculator-form {
+    padding: var(--space-lg);
+  }
+
+  .calculator-result-value {
+    font-size: 2rem;
+  }
+}
