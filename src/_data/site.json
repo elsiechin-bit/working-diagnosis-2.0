@@ -1,14 +1,23 @@
 {
-  "name": "Working Diagnosis",
-  "tagline": "Clinical reference & tools",
-  "description": "An internet workshop for general practice, Aotearoa New Zealand",
+  "title": "Working Diagnosis",
+  "subtitle": "Clinical Reference",
+  "description": "A clinical reference website for general practitioners and primary care clinicians in Aotearoa New Zealand.",
   "url": "https://workingdiagnosis.xyz",
-  "author": "Li",
-  "email": "feedback@workingdiagnosis.xyz",
-  "year": 2026,
-  "language": "en",
-  "region": "NZ",
-  "twitter": "workingdiagnosis",
-  "disclaimer": "Experimental reference database for primary care clinicians in Aotearoa New Zealand. Please check against local formularies and guidelines.",
-  "license": "CC-BY-NC-SA-4.0"
+  "author": {
+    "name": "Li",
+    "role": "GP Registrar",
+    "location": "Christchurch, New Zealand"
+  },
+  "license": "CC-BY-NC-SA-4.0",
+  "buildDate": "2024-09-09",
+  "pageTypes": [
+    "essays",
+    "explainers",
+    "guidelines",
+    "calculators",
+    "medications",
+    "procedures",
+    "handouts",
+    "research"
+  ]
 }

@@ -1,23 +1,52 @@
 ---
 layout: base
-layoutCss: layouts.css
+pageType: explainer
 ---
-
-<div class="article article-narrow">
-  {% if breadcrumb %}
-  <div class="wd-breadcrumb">
-    <a href="/">HOME</a> · <b>{{ breadcrumb }}</b>
+<div class="hx">
+  <div class="hx-head">
+    <div class="wd-breadcrumb" style="margin-bottom:10px;">{{ breadcrumb or 'Clinical Reference' }} · Explainer</div>
+    <h1>{{ title }}</h1>
+    {% if description %}
+      <p class="sub">{{ description }}</p>
+    {% endif %}
   </div>
+
+  {% if keyPoints %}
+    <div class="hx-keys">
+      {% for point in keyPoints %}
+        <div class="hx-key">
+          <div class="k">{{ point.label }}</div>
+          <div class="v">{{ point.value }}</div>
+          {% if point.note %}
+            <p>{{ point.note }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
   {% endif %}
 
-  <header class="wd-pagehead">
-    <h1 class="wd-pagetitle">{{ title }}</h1>
-    {% if description %}
-    <p style="font-size: var(--text-lg); font-style: italic; color: var(--ink-soft); line-height: 1.6;">
-      {{ description }}
-    </p>
-    {% endif %}
-  </header>
-
-  {{ content | safe }}
+  <article class="hx-body">
+    {{ content | safe }}
+  </article>
 </div>
+
+<style>
+  .hx { max-width: 880px; margin: 0 auto; }
+  .hx-head h1 { font-size: 40px; letter-spacing: -0.03em; color: var(--ink); margin: 0 0 10px; }
+  .hx-head .sub { font-size: 17px; color: var(--ink-soft); line-height: 1.55; max-width: 660px; }
+  .hx-keys { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; margin: 28px 0; }
+  .hx-key { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 20px; }
+  .hx-key .k { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .hx-key .v { font-family: var(--font-display); font-weight: 600; font-size: 28px; color: var(--accent-ink); line-height: 1.1; letter-spacing: -0.02em; }
+  .hx-key .v small { font-size: 13px; font-weight: 500; color: var(--ink-soft); }
+  .hx-key p { font-size: 13px; color: var(--ink-soft); margin: 8px 0 0; line-height: 1.45; }
+  @media (max-width:680px){ .hx-keys { grid-template-columns: 1fr; } }
+  
+  .hx-body { padding: 20px 0; }
+  .hx-body h2 { font-family: var(--font-display); font-weight: 600; font-size: 22px; color: var(--ink); margin: 24px 0 12px; }
+  .hx-body h3 { font-family: var(--font-display); font-weight: 600; font-size: 18px; color: var(--ink); margin: 18px 0 8px; }
+  .hx-body p, .hx-body li { font-size: 15px; line-height: 1.65; color: var(--ink-soft); margin-bottom: 12px; }
+  .hx-body ul { margin-left: 20px; }
+  .hx-body li { margin-bottom: 6px; }
+  .hx-body strong { color: var(--ink); }
+</style>

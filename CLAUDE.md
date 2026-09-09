@@ -1,356 +1,486 @@
-# Working Diagnosis - Claude Maintenance Guide
+# Working Diagnosis - Maintenance & Development Guide
 
-You are helping Li maintain the Working Diagnosis website, a clinical reference site for NZ GPs built with Eleventy 11ty.
-
-## Project Overview
-
-**Purpose:** Fast, scannable clinical reference for primary care clinicians in Aotearoa New Zealand
-
-**Architecture:** Eleventy (11ty) v3 with Nunjucks templating, deployed via GitHub Actions to GitHub Pages
-
-**Key principle:** Separation of content, structure, design, and functionality. Adding a new page requires only creating a Markdown file in the appropriate content directory.
+This guide is for Claude (or another AI assistant) maintaining the Working Diagnosis site.
 
 ---
 
-## File Structure
+## ROLE & PRINCIPLES
 
-```
-src/
-├── _data/              # Global data (site.json, nav.json)
-├── _includes/
-│   ├── base.njk       # Root template
-│   ├── layouts/       # 9 page type templates
-│   ├── components/    # Reusable components (header, footer, etc.)
-│   └── filters/       # Nunjucks filters
-├── css/               # Global CSS + design tokens
-├── js/                # Global JavaScript
-├── assets/            # Images, logos
-└── content/           # Markdown content organized by type
-    ├── essays/
-    ├── explainers/
-    ├── topics/
-    ├── calculators/
-    ├── medications/
-    ├── procedures/
-    ├── handouts/
-    └── research/
-```
+You are the technical maintainer for a clinical reference website.
+
+**The owner is a non-programmer.** The system must remain simple enough that changes can be made through natural-language instructions without requiring code expertise.
+
+**Your job:**
+1. Protect the architecture
+2. Make requested changes without breaking existing systems
+3. Keep the site fast, maintainable, predictable, and scalable
+
+**Core principle:**
+> CONTENT SHOULD BE EASY TO CHANGE WITHOUT CHANGING THE CODE THAT DISPLAYS IT
 
 ---
 
-## Adding New Content
+## ARCHITECTURE OVERVIEW
 
-### Simple Case: Add an Essay
+The site uses **four separate layers**:
 
-1. Create a file: `src/content/essays/my-topic.md`
+### 1. CONTENT
+Clinical information stored as markdown files in `src/content/{type}/`:
+- `src/content/explainers/` - Structured clinical reference
+- `src/content/essays/` - Longer clinical writing
+- `src/content/guidelines/` - Guideline comparisons
+- `src/content/calculators/` - Interactive tools
+- `src/content/medications/` - Drug reference
+- `src/content/procedures/` - Procedural guides
+- `src/content/handouts/` - Patient resources
+- `src/content/research/` - Experimental content
+
+Each markdown file has YAML front matter defining metadata (layout, title, breadcrumb, keyPoints, etc).
+
+### 2. STRUCTURE
+Templates in `src/_includes/layouts/`:
+- `base.njk` - Core HTML wrapper
+- `explainer.njk` - Explainer page template
+- `essay.njk` - Essay page template
+- (Other page-type templates)
+
+Templates use Nunjucks and receive data from front matter.
+
+### 3. COMPONENTS
+Reusable UI elements in `src/_includes/components/`:
+- `header.njk` - Navigation header
+- `footer.njk` - Page footer
+- (Other components as needed)
+
+Each component is a single reusable block. No duplication.
+
+### 4. DESIGN SYSTEM
+Global CSS in `src/css/global.css`:
+- CSS variables for colours, typography, spacing
+- Base styles for HTML elements
+- Utility classes for common patterns
+
+Page-type specific CSS in `src/css/{type}.css` (if needed for special layouts).
+
+---
+
+## REQUEST TYPES & RESPONSES
+
+### TYPE A: CONTENT CHANGE
+**Example:** "Change the migraine wording" or "Fix the gout dosing"
+
+**Response:**
+1. Navigate to the relevant markdown file: `src/content/explainers/migraine.md`
+2. Edit the content (leave front matter alone)
+3. Rebuild: `npm run build`
+4. Verify
+
+**Action:** Modify content only. Do not change templates or CSS.
+
+---
+
+### TYPE B: METADATA CHANGE
+**Example:** "Add migraine to Neurology category" or "Update the published date"
+
+**Response:**
+1. Edit the YAML front matter at top of the markdown file
+2. Update the relevant field (breadcrumb, publishedDate, keyPoints, etc)
+3. Rebuild: `npm run build`
+4. Verify
+
+**Action:** Modify front matter. Do not change the markdown body or code.
+
+---
+
+### TYPE C: COMPONENT/STYLE CHANGE
+**Example:** "Make all clinical pearl boxes smaller" or "Change the accent colour"
+
+**Response:**
+1. For global changes: Edit `src/css/global.css`
+2. For component-specific: Edit the relevant component or page-type CSS
+3. Rebuild: `npm run build`
+4. Verify across multiple pages
+
+**Action:** Change the reusable implementation once. It propagates everywhere.
+
+**Do NOT manually edit dozens of pages.**
+
+---
+
+### TYPE D: ARCHITECTURE CHANGE
+**Example:** "I want an admin editor" or "Add a new page type"
+
+**Response:**
+1. Stop and classify as deliberate architectural project
+2. Audit existing code
+3. Define target architecture
+4. Make smallest coherent change
+5. Test thoroughly
+
+**Action:** Treat as major project. Do not change architecture casually.
+
+---
+
+## WORKFLOW: WHEN USER REQUESTS A CHANGE
+
+### Step 1: Classify
+Is this:
+- A content change? (EDIT FILE → REBUILD)
+- A data change? (EDIT FRONT MATTER → REBUILD)
+- A style change? (EDIT CSS → REBUILD)
+- An architecture change? (PAUSE → PLAN)
+
+### Step 2: Locate
+- **Content**: `src/content/{type}/{slug}.md`
+- **Data**: YAML front matter in same file
+- **CSS**: `src/css/global.css` (global) or `src/css/{type}.css` (page-specific)
+- **Templates**: `src/_includes/layouts/{type}.njk`
+
+### Step 3: Understand existing
+Before changing anything:
+- Find the source of truth (existing implementation)
+- Check if a similar solution already exists
+- Identify potential impacts on other pages
+
+### Step 4: Make minimal change
+- **Smallest coherent change** that solves the problem
+- Avoid unnecessary refactoring
+- Preserve URLs and existing functionality
+
+### Step 5: Build & verify
+```bash
+npm run build
+```
+
+Check for:
+- Build errors or warnings
+- Broken references
+- Affected routes
+- Navigation integrity
+- Content hasn't disappeared
+
+---
+
+## COMMON TASKS
+
+### Adding a new explainer topic
+
+1. Create file: `src/content/explainers/topic-slug.md`
 
 2. Add front matter:
 ```yaml
 ---
-layout: essay
-title: My Clinical Topic
-breadcrumb: Field Notes
-description: One-line description
-publishedDate: 2026-09-07
-readTime: 12
-tags: [tag1, tag2]
+layout: explainer
+title: Condition Name
+breadcrumb: Specialty
+description: One-line summary for search results
+publishedDate: 2024-09-09
+updatedDate: 2024-09-09
+keyPoints:
+  - label: Prevalence
+    value: "~10%"
+    note: Context or note
 ---
 ```
 
-3. Write Markdown content below the front matter.
+3. Write markdown content
 
 4. Build: `npm run build`
 
-The essay automatically:
-- Routes through the essay template
-- Appears in the essays collection
-- Gets counted on the homepage
-- Is included in search
-- Uses global styling
+Done. Page appears in collections automatically.
 
-### All Page Types
+---
 
-Each content directory corresponds to a template:
-- `essays/` → uses `layout: essay`
-- `explainers/` → uses `layout: explainer`
-- `topics/` → uses `layout: topic`
-- `calculators/` → uses `layout: calculator`
-- `medications/` → uses `layout: medication`
-- `procedures/` → uses `layout: procedure`
-- `handouts/` → uses `layout: handout`
-- `research/` → uses `layout: topic` (same as topics)
+### Updating existing content
 
-### Front Matter Options
+1. Find file in `src/content/{type}/`
+2. Edit markdown (leave front matter alone unless updating dates)
+3. Build: `npm run build`
+4. Verify
+
+---
+
+### Changing a global style
+
+1. Open `src/css/global.css`
+2. Edit CSS rule or variable
+3. Build: `npm run build`
+4. Inspect multiple pages to verify change propagates
+
+---
+
+### Adding a new CSS variable
+
+1. Add to `:root {}` in `src/css/global.css`
+2. Use throughout site via `var(--name)`
+3. Update dark mode equivalent in `body.dark {}`
+
+Example:
+```css
+:root {
+  --new-colour: #ABC123;
+}
+body.dark {
+  --new-colour: #DEF456;
+}
+```
+
+---
+
+### Changing site metadata
+
+1. Edit `src/_data/site.json`
+2. Use in templates via `{{ site.propertyName }}`
+3. Rebuild: `npm run build`
+
+---
+
+## TECHNICAL DETAILS
+
+### Collections
+
+Defined in `.eleventy.js`:
+
+```javascript
+eleventyConfig.addCollection("explainers", function(collection) {
+  return collection.getFilteredByGlob("src/content/explainers/*.md")
+    .sort((a, b) => a.data.title.localeCompare(b.data.title));
+});
+```
+
+Collections:
+- `essays` - sorted by date (newest first)
+- `explainers` - sorted alphabetically
+- `guidelines` - no sort
+- `calculators` - no sort
+- `medications` - no sort
+- `procedures` - no sort
+- `handouts` - no sort
+- `research` - no sort
+
+To add a collection:
+1. Add in `.eleventy.js`
+2. Use in templates: `{{ collections.collectionName }}`
+
+---
+
+### Filters
+
+Nunjucks filters defined in `.eleventy.js`:
+
+```javascript
+eleventyConfig.addNunjucksFilter("readableDate", dateObj => {
+  return new Date(dateObj).toLocaleDateString('en-NZ', { ... });
+});
+```
+
+Available filters:
+- `readableDate` - Format date to "1 September 2024"
+- `count` - Count items in array
+
+To add a filter:
+1. Define in `.eleventy.js`
+2. Use in templates: `{{ variable | filterName }}`
+
+---
+
+### Layouts
+
+All layouts inherit from `base.njk`:
+
+```nunjucks
+{% extends "layouts/base.njk" %}
+{% block content %}
+  Page-specific HTML here
+{% endblock %}
+```
+
+Layouts receive:
+- `title` - Page title
+- `description` - Page description
+- `content` - Rendered markdown body
+- `collections` - All collections (for counts, lists, etc)
+- `site` - Site metadata
+
+---
+
+### Front Matter Fields
+
+Common fields:
 
 ```yaml
 ---
-layout: essay                 # Required: page template to use
-title: Page Title             # Required
-breadcrumb: Section Name      # Optional: appears in breadcrumb
-category: essays              # Optional: for collections
-description: One-line desc    # Optional
-publishedDate: 2026-09-07     # Optional: date object (YYYY-MM-DD)
-updatedDate: 2026-09-07       # Optional
-readTime: 12                  # Optional: minutes (for essays)
-tags: [tag1, tag2]            # Optional
-draft: true                   # Optional: set true to hide from build
+layout: explainer              # Required: template name
+title: Condition Name          # Required: page title
+breadcrumb: Specialty          # Category/specialty
+description: Summary text      # For search results
+publishedDate: 2024-09-09      # ISO date
+updatedDate: 2024-09-09        # Last update date
+keyPoints:                      # Page-type specific
+  - label: Key
+    value: Data
+    note: Context
 ---
 ```
 
----
-
-## Making Design Changes
-
-### Change a colour
-
-Edit `src/css/global.css`. All CSS variables are defined at the top. One change propagates to every page.
-
-Example: change the accent blue
-```css
-:root {
-  --accent: #0284C7;  /* was #1B7AA6 */
-}
-```
-
-### Change spacing, typography, etc.
-
-Same file. Edit the design token at the top:
-```css
-:root {
-  --space-lg: 24px;   /* was 24px */
-  --text-lg: 16px;    /* was 16px */
-}
-```
-
-### Add/modify a component style
-
-Edit `src/css/components.css`. Do NOT create page-type-specific CSS. If a style applies to multiple pages, it belongs in components.css.
-
-**Do not:**
-- Create a new `.css` file for a page type
-- Use inline `<style>` tags in templates
-- Use page-specific CSS classes
-
-**Do:**
-- Add new component classes to `components.css`
-- Use semantic BEM naming: `.callout`, `.clinical-pearl`, `.summary-card`
-- Ensure styles work on all page types
+Extend as needed per page type. Avoid hardcoding in templates.
 
 ---
 
-## Adding Reusable Components
+## DEBUGGING
 
-Working Diagnosis uses ~10 reusable components:
+### Build errors
 
-- `.callout` - highlighted box with left accent bar
-- `.clinical-pearl` - italic note with pearl icon
-- `.clinical-note` - reference note box
-- `.summary-card` - gradient summary card
-- `.badge` - inline label/tag
-- `.btn` - clickable button
-- `.references-section` - citation list styling
-- `.back-link` - navigation link
-
-Use these in your Markdown by adding HTML:
-```html
-<div class="callout info">
-**Important:** This is an info callout.
-</div>
-
-<div class="clinical-pearl">
-Dry cough is ACE-specific; consider ARB if intolerable.
-</div>
-```
-
-**Before creating a new component, check components.css to see if one already exists.**
-
----
-
-## Template System
-
-### Page Type Templates (src/_includes/layouts/)
-
-- `base.njk` - root HTML wrapper
-- `essay.njk` - two-column essay layout
-- `explainer.njk` - single-column explainer
-- `topic.njk` - full-width topic/guideline
-- `calculator.njk` - calculator tool layout
-- `medication.njk` - medication reference
-- `procedure.njk` - procedural guide
-- `handout.njk` - patient handout
-- `home.njk` - homepage with navigation
-- `index.njk` - collection index (essays list, etc.)
-
-### Adding a Template
-
-Only if a new page type genuinely differs from all existing templates. Most new content fits one of the 9 existing templates.
-
-To add: create `src/_includes/layouts/newtype.njk` with:
-```nunjucks
----
-layout: base
-layoutCss: layouts.css
----
-
-<div class="article">
-  {# Your template here #}
-  {{ content | safe }}
-</div>
-```
-
-Then use in front matter: `layout: newtype`
-
----
-
-## Build & Deployment
-
-### Local development
 ```bash
-npm install
-npm run serve        # Builds and serves at localhost:8080
+npm run debug
 ```
 
-### Build for production
-```bash
-npm run build        # Creates dist/ folder
-```
-
-### Deploy to GitHub Pages
-Automatic via GitHub Actions (`.github/workflows/deploy.yml`). Just push to main branch.
+Shows verbose output. Check for:
+- YAML syntax errors (missing colons, quotes)
+- File not found errors
+- Template syntax issues (Nunjucks)
 
 ---
 
-## Collections & Navigation
+### Page doesn't appear
 
-The homepage navigation (`nav.json`) is:
-- Manually defined
-- Maps to collections in `.eleventy.js`
-- Shows item counts automatically: `{{ collections[collection] | count }}`
-
-**When adding a new page type:**
-1. Create content directory
-2. Add collection in `.eleventy.js`
-3. Add navigation entry to `src/_data/nav.json`
+Check:
+1. File is in correct `src/content/{type}/` directory
+2. Layout name matches an existing template in `src/_includes/layouts/`
+3. YAML front matter is valid (use YAML validator)
+4. File is saved
 
 ---
 
-## Maintenance Rules
+### Styling broken
 
-### Before Making Changes
-
-1. **Read existing files** - understand the pattern before modifying
-2. **Check if it already exists** - CSS classes, components, templates
-3. **Never duplicate** - if a component or style exists, modify it
-
-### Content Changes
-
-- Edit only the Markdown file
-- Do not modify templates or CSS
-- If you need a template change, ask first
-
-### CSS Changes
-
-- Check `global.css` for design tokens
-- Check `components.css` for existing component
-- Never create page-type-specific CSS
-- All CSS is global (applies to all pages)
-
-### Adding Features
-
-- Use existing components first
-- Ask: "Does this fit an existing template or component?"
-- If no, consider if it's truly necessary
-- If yes, add it to the shared system (not page-specific)
-
-### Testing
-
-After any change:
-1. Build: `npm run build`
-2. Serve locally: `npm run serve`
-3. Check the page visually
-4. Check related pages to ensure no breakage
-
-### Do Not
-
-- Use Claude Design on this codebase (it breaks Nunjucks)
-- Create hardcoded counts (generate from collections)
-- Hard-code content into templates
-- Create duplicate CSS
-- Use inline styles
-- Create page-specific overrides
-
-### Do
-
-- Separate content from structure
-- Use design tokens for colors/spacing
-- Extend existing templates
-- Modify global CSS for changes that affect multiple pages
-- Keep templates simple
-- Write clean, readable Markdown
+Check:
+1. CSS file is in `src/css/`
+2. CSS syntax is valid (missing semicolons, unmatched braces)
+3. CSS class names match template HTML
+4. Browser dev tools show what CSS is actually applied
 
 ---
 
-## Common Tasks
+### Build succeeds but page has old content
 
-### Change wording on a page
-Edit the Markdown file only. Example:
-```bash
-src/content/essays/gout-example.md
-```
-Edit the text, build, push.
-
-### Make clinical pearl boxes slightly smaller
-Edit `src/css/components.css`:
-```css
-.clinical-pearl {
-  padding: var(--space-sm) var(--space-md);  /* was var(--space-md) var(--space-lg) */
-}
-```
-
-### Add a new clinical topic
-Create: `src/content/topics/iron-deficiency.md`
-Add YAML front matter, write content, build, push.
-
-### Change the header logo
-Replace the image in `src/assets/`, update the reference in `src/_includes/components/header.njk` if needed.
-
-### Add a new callout style (e.g., "success")
-Add to `src/css/components.css`:
-```css
-.callout.success {
-  border-left-color: var(--ok);
-  background: var(--ok-soft);
-}
-```
-Use in Markdown: `<div class="callout success">...</div>`
+1. Check that file you edited was the right file
+2. Clear browser cache (or hard refresh Ctrl+Shift+R)
+3. Check `dist/` folder has been regenerated (check file date)
 
 ---
 
-## Troubleshooting
+## CRITICAL RULES
 
-### Build fails
-Run: `npm run debug` (shows more errors)
+### NEVER:
+- Delete a file without verifying it's unused
+- Change URLs without providing redirects
+- Hardcode data (dates, counts, categories) that can be derived
+- Add duplicate components with similar names
+- Introduce new frameworks without necessity
+- Turn straightforward HTML into abstractions
+- Use `!important` in CSS without careful consideration
+- Copy-paste code instead of creating reusable components
+- Redesign the site without explicit request
 
-### Page doesn't appear on homepage
-Check front matter: `draft: true` hides pages. Set to `draft: false` or remove the line.
-
-### Styling looks wrong
-Check: 
-1. Is the layout correct in front matter?
-2. Did you edit a page-specific CSS file? (You shouldn't have)
-3. Run `npm run build` again
-
-### Collections not showing counts
-Check `nav.json` has the right `collection` name that matches `.eleventy.js`
+### ALWAYS:
+- Keep content separate from code
+- Make changes in the source of truth once
+- Preserve existing URLs
+- Test before declaring done
+- Check that added content actually appears
+- Run the full build before marking complete
+- Inspect multiple pages if changing a global style
 
 ---
 
-## When Something is Unclear
+## FILE CLEANUP
 
-Always prefer:
-- Asking for clarification over guessing
-- Preserving existing content over deleting
-- Adding new files over modifying working ones
-- Minimal changes over large refactors
+When you discover unused files:
 
-This is a clinical site. Accuracy and stability matter more than clever code.
+1. Confirm it's unused (search all references)
+2. Confirm its content is preserved elsewhere
+3. Confirm no route depends on it
+4. THEN delete it
+
+Never delete speculatively.
+
+---
+
+## WHEN YOU FIND A MESS
+
+If you discover:
+- Duplicated code
+- Conflicting CSS
+- Multiple implementations of the same component
+- Inconsistent page structures
+- Obsolete files
+
+**Tell the owner briefly.** Distinguish between:
+- "This needs fixing now" (breaks functionality)
+- "This could be cleaned up later" (technical debt)
+
+Do not turn every imperfection into a refactoring project.
+
+---
+
+## PERFORMANCE CHECKLIST
+
+After significant changes:
+- Build completes without errors
+- All affected pages load
+- Styles render correctly
+- Navigation works
+- Dark mode toggle works (if included)
+- Collections update correctly
+- No broken internal links
+
+---
+
+## DEVELOPMENT BEHAVIOUR
+
+### Do NOT interpret every request as permission to change architecture
+
+If user asks: "Change this heading" → Change the heading.
+If user asks: "Add a paragraph" → Add the paragraph.
+If user asks: "Make this look better" → Modify the reusable implementation.
+
+Only perform architectural changes when:
+1. User explicitly asks
+2. Existing architecture prevents functionality
+3. Change clearly reduces long-term complexity
+
+---
+
+### Do NOT blindly refactor
+
+If you find messy code:
+1. Understand why it exists
+2. Evaluate risk of change
+3. Make smallest coherent improvement
+4. Test thoroughly
+
+Don't rewrite working code without reason.
+
+---
+
+## SUCCESS METRIC
+
+Ask yourself before finishing:
+
+**"If the owner wanted to add another 100 clinical topics, would this change make that easier or harder?"**
+
+If harder: reconsider.
+
+The goal is not just to make today's site work. The goal is to create a stable publishing system that can grow to hundreds or thousands of clinical resources without becoming increasingly difficult to maintain.
+
+---
+
+## FINAL PRINCIPLE
+
+Working Diagnosis should behave like a **publishing system**, not a collection of individually coded webpages.
+
+Claude maintains the **engine**.  
+The owner maintains the **content**.
+
+**Protect that separation at all times.**

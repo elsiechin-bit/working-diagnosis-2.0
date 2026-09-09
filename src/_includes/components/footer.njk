@@ -1,11 +1,22 @@
 <footer class="wd-footer">
-  <div class="wd-footer-inner">
-    <span>© {{ site.year }} {{ site.name }}</span>
-    <span class="disc">{{ site.disclaimer }}</span>
-    <div style="display: flex; gap: 16px; font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.1em;">
-      <a href="https://buymeacoffee.com" target="_blank">Support</a>
-      <a href="mailto:{{ site.email }}">Feedback</a>
-      <a href="/about/">About</a>
+  <div class="wrap">
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 32px 0; border-top: 1px solid var(--border);">
+      <div>
+        <h4 style="font-weight: 600; margin-bottom: 12px;">{{ site.title }}</h4>
+        <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6;">{{ site.description }}</p>
+        <p style="font-size: 12px; color: var(--muted); margin-top: 12px;">By {{ site.author.name }}, {{ site.author.role }}</p>
+      </div>
+      <div>
+        <h4 style="font-weight: 600; margin-bottom: 12px;">About</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li style="margin-bottom: 8px;"><a href="/about.html">About this site</a></li>
+          <li style="margin-bottom: 8px;"><a href="/">Home</a></li>
+          <li style="margin-bottom: 8px;">License: {{ site.license }}</li>
+        </ul>
+      </div>
+    </div>
+    <div style="padding: 20px 0; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); text-align: center;">
+      Built with Eleventy. Last updated {{ site.buildDate }}.
     </div>
   </div>
 </footer>

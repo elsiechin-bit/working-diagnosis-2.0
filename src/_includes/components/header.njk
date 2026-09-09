@@ -1,18 +1,19 @@
 <header class="wd-header">
   <div class="wd-header-inner">
     <div class="wd-header-left">
-      <a class="wd-brand" href="/" title="Working Diagnosis Home">
+      <button class="wd-back" onclick="history.length>1?history.back():location.href='/'">← Back</button>
+      <a class="wd-brand" href="/">
         <svg class="wd-icon" viewBox="0 0 100 100" width="32" height="32">
           <line x1="50" y1="20" x2="50" y2="80" stroke-width="3"/>
           <line x1="20" y1="50" x2="80" y2="50" stroke-width="3"/>
           <circle cx="50" cy="50" r="28" stroke-width="2"/>
         </svg>
         <span class="wd-wordmark">
-          <b>Working Diagnosis</b>
-          <span>Clinical Reference</span>
+          <b>{{ site.title }}</b>
+          <span>{{ site.subtitle }}</span>
         </span>
       </a>
     </div>
-    <button class="wd-iconbtn" id="darkBtn" title="Toggle dark mode">☾</button>
+    <button class="wd-iconbtn" data-wd-dark title="Switch to dark">☾</button>
   </div>
 </header>
