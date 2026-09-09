@@ -2,6 +2,33 @@ const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function(eleventyConfig) {
+
+  // Date filters
+eleventyConfig.addNunjucksFilter("readableDate", dateObj => {
+  return new Date(dateObj).toLocaleDateString('en-NZ', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+});
+
+eleventyConfig.addNunjucksFilter("dateShort", dateObj => {
+  return new Date(dateObj).toLocaleDateString('en-NZ', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+});
+
+// String filters
+eleventyConfig.addNunjucksFilter("padStart", (str, len, char) => {
+  return String(str).padStart(len, char || ' ');
+});
+
+eleventyConfig.addNunjucksFilter("count", arr => {
+  return arr ? arr.length : 0;
+});
+
   // Pass through static assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
