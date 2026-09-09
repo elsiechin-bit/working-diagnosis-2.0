@@ -1,6 +1,6 @@
 ---
 layout: explainer
-title: Micronutrients: Vitamins &amp; Minerals - Working Diagnosis
+title: "Micronutrients: Vitamins &amp; Minerals - Working Diagnosis"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

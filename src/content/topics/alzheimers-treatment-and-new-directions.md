@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Treating Alzheimer's disease: what works now, and what is coming
+title: "Treating Alzheimer's disease: what works now, and what is coming"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

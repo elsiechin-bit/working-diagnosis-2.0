@@ -1,6 +1,6 @@
 ---
 layout: explainer
-title: Erectile Dysfunction: Medications & Management — Working Diagnosis
+title: "Erectile Dysfunction: Medications & Management — Working Diagnosis"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

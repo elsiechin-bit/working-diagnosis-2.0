@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: IoT health wearables: a deep dive
+title: "IoT health wearables: a deep dive"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

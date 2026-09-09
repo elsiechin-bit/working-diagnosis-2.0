@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Peptides go viral: the longevity influencer economy
+title: "Peptides go viral: the longevity influencer economy"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

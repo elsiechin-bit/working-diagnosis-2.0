@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Muscle, online: the rise and culture of bodybuilding forums
+title: "Muscle, online: the rise and culture of bodybuilding forums"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

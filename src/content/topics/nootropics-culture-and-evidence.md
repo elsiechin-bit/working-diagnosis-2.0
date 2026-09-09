@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Smart drugs: nootropics from the lab to r/nootropics
+title: "Smart drugs: nootropics from the lab to r/nootropics"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

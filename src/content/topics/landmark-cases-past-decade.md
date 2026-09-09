@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Landmark medical case law: past 10 years
+title: "Landmark medical case law: past 10 years"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

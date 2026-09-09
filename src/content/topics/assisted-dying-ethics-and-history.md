@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Assisted dying: how it works in NZ and the world
+title: "Assisted dying: how it works in NZ and the world"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

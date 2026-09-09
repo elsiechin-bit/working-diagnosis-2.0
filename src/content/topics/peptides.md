@@ -1,6 +1,6 @@
 ---
 layout: explainer
-title: Peptides: GLP-1s, Healing Peptides &amp; Growth Hormone Secretagogues - Working Diagnosis
+title: "Peptides: GLP-1s, Healing Peptides &amp; Growth Hormone Secretagogues - Working Diagnosis"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

@@ -1,6 +1,6 @@
 ---
 layout: calculator
-title: Developmental Milestones: Birth to 5 Years — Working Diagnosis
+title: "Developmental Milestones: Birth to 5 Years — Working Diagnosis"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

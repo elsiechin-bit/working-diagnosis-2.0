@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Frontotemporal dementia: when it isn't the memory
+title: "Frontotemporal dementia: when it isn't the memory"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

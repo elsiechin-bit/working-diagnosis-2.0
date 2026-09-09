@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Field Notes: Medications Affecting Dentition — Working Diagnosis
+title: "Field Notes: Medications Affecting Dentition — Working Diagnosis"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

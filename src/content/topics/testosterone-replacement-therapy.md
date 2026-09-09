@@ -1,6 +1,6 @@
 ---
 layout: explainer
-title: Testosterone Replacement Therapy: Methods, Indications & Evidence — Working Diagnosis
+title: "Testosterone Replacement Therapy: Methods, Indications & Evidence — Working Diagnosis"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

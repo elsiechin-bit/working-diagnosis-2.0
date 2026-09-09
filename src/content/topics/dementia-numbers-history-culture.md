@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: The shape of forgetting: dementia in numbers, history and culture
+title: "The shape of forgetting: dementia in numbers, history and culture"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01

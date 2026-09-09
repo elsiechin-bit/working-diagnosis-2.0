@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: Borderline personality disorder: a deep dive
+title: "Borderline personality disorder: a deep dive"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01
