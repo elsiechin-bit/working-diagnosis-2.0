@@ -1,6 +1,6 @@
 ---
 layout: essay
-title: AI and mental health: a deep dive
+title: "AI and mental health: a deep dive"
 category: clinical
 publishedDate: 2026-01-01
 updatedDate: 2026-01-01
