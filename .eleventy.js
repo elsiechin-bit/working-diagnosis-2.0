@@ -58,6 +58,14 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  eleventyConfig.addNunjucksFilter("dateShort", dateObj => {
+  return new Date(dateObj).toLocaleDateString('en-NZ', {
+    year: 'numeric',
+    month: 'short',
+    day: 'numeric'
+  });
+});
+
   eleventyConfig.addNunjucksFilter("count", (arr) => {
     return arr ? arr.length : 0;
   });
