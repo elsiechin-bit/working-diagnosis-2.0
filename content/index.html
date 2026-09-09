@@ -1,65 +1,152 @@
-<!DOCTYPE html>
-<html lang="en-NZ">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clinical reference &amp; tools - Working Diagnosis</title>
-  <meta name="description" content="A clinical reference website for general practitioners and primary care clinicians in Aotearoa New Zealand.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link href="/css/global.css" rel="stylesheet">
-  
-  
-</head>
-<body>
-  <header class="wd-header">
-  <div class="wd-header-inner">
-    <div class="wd-header-left">
-      <button class="wd-back" onclick="history.length>1?history.back():location.href='/'">← Back</button>
-      <a class="wd-brand" href="/">
-        <svg class="wd-icon" viewBox="0 0 100 100" width="32" height="32">
-          <line x1="50" y1="20" x2="50" y2="80" stroke-width="3"/>
-          <line x1="20" y1="50" x2="80" y2="50" stroke-width="3"/>
-          <circle cx="50" cy="50" r="28" stroke-width="2"/>
-        </svg>
-        <span class="wd-wordmark">
-          <b>Working Diagnosis</b>
-          <span>Clinical Reference</span>
-        </span>
-      </a>
-    </div>
-    <button class="wd-iconbtn" data-wd-dark title="Switch to dark">☾</button>
+<section class="hero">
+  <h1>Clinical reference <em>&amp; tools</em></h1>
+  <div class="hero-search">
+    <span class="ico">⌕</span>
+    <input type="text" id="siteSearch" placeholder="Search topics, medications, calculators…" autocomplete="off" aria-label="Search the index">
   </div>
-</header>
+</section>
 
-  <main class="wd-main" data-screen-label="Clinical reference &amp; tools">
-    
-  </main>
-  <footer class="wd-footer">
-  <div class="wrap">
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; padding: 32px 0; border-top: 1px solid var(--border);">
-      <div>
-        <h4 style="font-weight: 600; margin-bottom: 12px;">Working Diagnosis</h4>
-        <p style="font-size: 14px; color: var(--ink-soft); line-height: 1.6;">A clinical reference website for general practitioners and primary care clinicians in Aotearoa New Zealand.</p>
-        <p style="font-size: 12px; color: var(--muted); margin-top: 12px;">By Li, GP Registrar</p>
-      </div>
-      <div>
-        <h4 style="font-weight: 600; margin-bottom: 12px;">About</h4>
-        <ul style="list-style: none; padding: 0;">
-          <li style="margin-bottom: 8px;"><a href="/about.html">About this site</a></li>
-          <li style="margin-bottom: 8px;"><a href="/">Home</a></li>
-          <li style="margin-bottom: 8px;">License: CC-BY-NC-SA-4.0</li>
-        </ul>
-      </div>
-    </div>
-    <div style="padding: 20px 0; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); text-align: center;">
-      Built with Eleventy. Last updated 2024-09-09.
-    </div>
-  </div>
-</footer>
+<section class="toc">
+  <div class="toc-noresults" id="noRes" style="display:none">No results. Try <a href="/explainers/">Explainers</a> or <a href="/essays/">Field Notes</a>.</div>
 
-  <script src="/js/global.js"></script>
-  
-</body>
-</html>
+  <div class="section-label">Core reference</div>
+  <a href="/topics/" class="toc-entry">
+    <span class="entry-num">01</span>
+    <div class="entry-body">
+      <div class="entry-cat">Guidelines</div>
+      <div class="entry-title">NZ Guideline Comparisons</div>
+      <div class="entry-desc">NZ, Australian and international guidance alignment and divergence.</div>
+    </div>
+    <div class="entry-meta">
+      <span class="entry-tag">0 topics</span>
+      <span class="entry-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/medications/" class="toc-entry">
+    <span class="entry-num">02</span>
+    <div class="entry-body">
+      <div class="entry-cat">Medications</div>
+      <div class="entry-title">Medication Calculators</div>
+      <div class="entry-desc">Conversions, tapering, drug reference and deprescribing tools.</div>
+    </div>
+    <div class="entry-meta">
+      <span class="entry-tag">0 tools</span>
+      <span class="entry-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/calculators/" class="toc-entry">
+    <span class="entry-num">03</span>
+    <div class="entry-body">
+      <div class="entry-cat">Clinical Tools</div>
+      <div class="entry-title">Risk Scores &amp; Decision Tools</div>
+      <div class="entry-desc">CHA₂DS₂-VASc, PREDICT, COPD staging, cervical screening and more.</div>
+    </div>
+    <div class="entry-meta">
+      <span class="entry-tag">0 calculators</span>
+      <span class="entry-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/procedures/" class="toc-entry">
+    <span class="entry-num">04</span>
+    <div class="entry-body">
+      <div class="entry-cat">Procedures</div>
+      <div class="entry-title">Procedural Guides &amp; Techniques</div>
+      <div class="entry-desc">Clinical procedures, injection techniques, minor surgery and equipment.</div>
+    </div>
+    <div class="entry-meta">
+      <span class="entry-tag">0 guides</span>
+      <span class="entry-arrow">→</span>
+    </div>
+  </a>
+
+  <div class="section-label">Learning</div>
+  <a href="/explainers/" class="toc-entry">
+    <span class="entry-num">05</span>
+    <div class="entry-body">
+      <div class="entry-cat">Explainers</div>
+      <div class="entry-title">Clinical Topics At a Glance</div>
+      <div class="entry-desc">Mechanism explainers for antidepressants, statins, antihypertensives.</div>
+    </div>
+    <div class="entry-meta">
+      <span class="entry-tag">2 topics</span>
+      <span class="entry-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/research/" class="toc-entry">
+    <span class="entry-num">06</span>
+    <div class="entry-body">
+      <div class="entry-cat">Research</div>
+      <div class="entry-title">Research &amp; Evidence</div>
+      <div class="entry-desc">Landmark trials, key findings and evidence interpretation.</div>
+    </div>
+    <div class="entry-meta">
+      <span class="entry-tag">0 trials</span>
+      <span class="entry-arrow">→</span>
+    </div>
+  </a>
+
+  <div class="section-label">Practice</div>
+  <a href="/essays/" class="toc-entry">
+    <span class="entry-num">07</span>
+    <div class="entry-body">
+      <div class="entry-cat">Field Notes</div>
+      <div class="entry-title">Essays &amp; Reflections</div>
+      <div class="entry-desc">Consultation frameworks and essays from practice.</div>
+    </div>
+    <div class="entry-meta">
+      <span class="entry-tag">1 essays</span>
+      <span class="entry-arrow">→</span>
+    </div>
+  </a>
+
+  <a href="/handouts/" class="toc-entry">
+    <span class="entry-num">08</span>
+    <div class="entry-body">
+      <div class="entry-cat">Handouts</div>
+      <div class="entry-title">Patient Handouts</div>
+      <div class="entry-desc">Plain-language guides for patients.</div>
+    </div>
+    <div class="entry-meta">
+      <span class="entry-tag">0 pages</span>
+      <span class="entry-arrow">→</span>
+    </div>
+  </a>
+
+</section>
+
+<script>
+  (function () {
+    const search = document.getElementById('siteSearch');
+    if (!search) return;
+    const toc = document.querySelector('.toc');
+    const entries = [...toc.querySelectorAll('.toc-entry')];
+    const labels = [...toc.querySelectorAll('.section-label')];
+    const noRes = document.getElementById('noRes');
+    function apply() {
+      const q = search.value.trim().toLowerCase();
+      entries.forEach(e => {
+        e.style.display = (!q || e.textContent.toLowerCase().includes(q)) ? '' : 'none';
+      });
+      labels.forEach(lab => {
+        let n = lab.nextElementSibling, anyVisible = false;
+        while (n && !n.classList.contains('section-label')) {
+          if (n.classList.contains('toc-entry') && n.style.display !== 'none') { anyVisible = true; break; }
+          n = n.nextElementSibling;
+        }
+        lab.style.display = anyVisible ? '' : 'none';
+      });
+      noRes.style.display = (q && !entries.some(e => e.style.display !== 'none')) ? '' : 'none';
+    }
+    search.addEventListener('input', apply);
+    search.addEventListener('keydown', ev => {
+      if (ev.key === 'Enter') {
+        const vis = entries.filter(e => e.style.display !== 'none' && e.tagName === 'A' && e.getAttribute('href'));
+        if (vis.length) window.location.href = vis[0].getAttribute('href');
+      }
+    });
+  })();
+</script>
