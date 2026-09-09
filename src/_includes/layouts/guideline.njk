@@ -1,0 +1,22 @@
+---
+layout: base
+pageType: research
+---
+<div class="wrap">
+  <div class="research-head">
+    <div class="wd-breadcrumb" style="margin-bottom:10px;">{{ breadcrumb or 'Research' }} · Experiment</div>
+    <h1>{{ title }}</h1>
+    {% if description %}
+      <p class="sub">{{ description }}</p>
+    {% endif %}
+  </div>
+
+  <article style="max-width: 880px; margin: 32px auto; padding: 0 20px;">
+    {{ content | safe }}
+  </article>
+</div>
+
+<style>
+  .research-head h1 { font-size: 40px; letter-spacing: -0.03em; color: var(--ink); margin: 0 0 10px; }
+  .research-head .sub { font-size: 17px; color: var(--ink-soft); line-height: 1.55; max-width: 660px; }
+</style>
